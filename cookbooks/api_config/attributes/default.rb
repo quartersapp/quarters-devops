@@ -7,9 +7,10 @@ node.default['common']['deploy_user_home'] = '/home/deploy'
 
 
 node.default['nodejs']['version'] = '8.3.0'
+node.default['nodejs']['install_method'] = 'binary'
 node.default['nodejs']['source']['checksum'] = 'e68cc956f0ca5c54e7f3016d639baf987f6f9de688bb7b31339ab7561af88f41'
 node.default['nodejs']['binary']['checksum'] = 'e68cc956f0ca5c54e7f3016d639baf987f6f9de688bb7b31339ab7561af88f41'
-
+node.default['bin_path'] = '/usr/local/bin'
 
 node.default['postgresql']['version'] = '9.6'
 node.default['postgresql']['dir'] = '/etc/postgresql/9.6/main'

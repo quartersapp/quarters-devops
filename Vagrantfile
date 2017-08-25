@@ -20,7 +20,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
     chef.json = {
       user: 'vagrant',
       postgres_config: {
-        databases: ['quarters_development', 'ps_test'],
+        databases: ['quarters_development', 'quarters_test'],
         connection: {
           host: '127.0.0.1',
           port: 5432,
@@ -34,6 +34,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
     chef.run_list = [
       "api_config::setup-common",
       "api_config::setup-nodejs",
+      "api_config::install-global-node-pkgs",
       "api_config::setup-postgresql-server",
       "api_config::setup-postgresql-client",
       "api_config::setup-environment",
