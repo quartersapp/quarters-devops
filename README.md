@@ -1,4 +1,4 @@
-# api
+# quarters-devops
 
 
 ## Uploading your Chef cookbooks to Amazon S3:
