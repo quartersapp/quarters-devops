@@ -5,7 +5,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   config.vm.box = "ubuntu/trusty64"
   config.vm.hostname = "api"
   config.vm.network :private_network, ip: "10.0.0.10"
-  config.vm.synced_folder "../quarters-api", "/home/vagrant/quarters-api"
+  config.vm.synced_folder "../quarters-api", "/home/vagrant/quarters-api", type: "nfs"
   config.vm.network "forwarded_port", guest: 3000, host: 3000
 
   config.vm.provider "virtualbox" do |v|
