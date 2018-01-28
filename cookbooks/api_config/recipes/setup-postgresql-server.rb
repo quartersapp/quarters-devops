@@ -13,7 +13,7 @@ execute 'create deploy user' do
   user 'postgres'
 end
 
-execute 'create deploy user' do
-  command '/usr/bin/psql < /tmp/postgresql_user.sql'
-  user 'postgres'
+execute 'create databases' do
+  command 'sudo createdb quarters_dev && sudo createdb quarters_test'
+  user 'root'
 end

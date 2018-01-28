@@ -19,15 +19,6 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   config.vm.provision :chef_solo do |chef|
     chef.json = {
       user: 'vagrant',
-      postgres_config: {
-        databases: ['quarters_development', 'quarters_test'],
-        connection: {
-          host: '127.0.0.1',
-          port: 5432,
-          username: 'vagrant',
-          password: 'vagrant'
-        }
-      },
       env_vars: {}
     }
 
@@ -37,8 +28,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
       "api_config::install-global-node-pkgs",
       "api_config::setup-postgresql-server",
       "api_config::setup-postgresql-client",
-      "api_config::setup-environment",
-      "api_config::create-databases"
+      "api_config::setup-environment"
     ]
 
   end

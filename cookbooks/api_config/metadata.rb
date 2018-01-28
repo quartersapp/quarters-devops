@@ -8,7 +8,6 @@ depends 'build-essential', '~> 8.0.0'
 depends 'nodejs', '~> 3.0.0'
 
 depends 'postgresql', '~> 6.1.1'
-depends "database", "~> 6"
 
 depends 'application', '~> 5.1.0'
 depends 'application_git', '~> 1.1.0'

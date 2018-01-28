@@ -1,12 +1,11 @@
 DO
 $body$
 BEGIN
-   IF NOT EXISTS (SELECT * FROM pg_catalog.pg_user WHERE usename = 'vagrant') THEN
-      CREATE ROLE vagrant LOGIN PASSWORD 'vagrant';
-      ALTER ROLE vagrant WITH SUPERUSER;
+   IF NOT EXISTS (SELECT * FROM pg_catalog.pg_user WHERE usename = 'root') THEN
+      CREATE ROLE root LOGIN PASSWORD 'root';
+      ALTER ROLE root WITH SUPERUSER;
    END IF;
 
 END
 $body$;
-DROP DATABASE IF EXISTS vagrant;
-CREATE DATABASE vagrant;
+DROP DATABASE IF EXISTS root;
